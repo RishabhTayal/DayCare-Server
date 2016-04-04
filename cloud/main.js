@@ -8,8 +8,8 @@ Parse.Cloud.define("notification", function(request, response) {
     var query = request.params.query;
     console.log(query);
     Parse.Push.send({
-        // channels: ["channel"],
-        where: query,
+        channels: ["channel"],
+        // where: query,
         data: {
             alert: "test"
         }
