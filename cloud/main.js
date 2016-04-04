@@ -5,8 +5,8 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("notification", function(request, response) {
     // Parse.Cloud.useMasterKey();
-    var query = request.params.query;
-    console.log(query);
+    // var query = request.params.query;
+    // console.log(query);
     Parse.Push.send({
         channels: ["channel"],
         // where: query,
