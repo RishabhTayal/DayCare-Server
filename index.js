@@ -22,9 +22,9 @@ var api = new ParseServer({
   },
   push: {
     ios: {
-      pfx: '',
+      pfx: 'Certificates.p12',
       bundleId: 'com.rtayal.DayCareClient',
-      production: false
+      production: true
     }
   }
 });
