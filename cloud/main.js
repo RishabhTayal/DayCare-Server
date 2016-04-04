@@ -14,7 +14,7 @@ Parse.Cloud.define("notification", function(request, response) {
             alert: "test"
         }
     }, {
-    	useMasterKey: true
+    	useMasterKey: true,
         success: function() {
             // status.success("Push sent to all users");
             response.success("push sent");
