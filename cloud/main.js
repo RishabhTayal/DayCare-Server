@@ -11,7 +11,7 @@ Parse.Cloud.define("notification", function(request, response) {
         channels: ["channel"],
         // where: query,
         data: {
-            alert: "Hey there"
+            alert: request.params.pushText
         }
     }, {
     	useMasterKey: true,
