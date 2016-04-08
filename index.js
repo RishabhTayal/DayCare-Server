@@ -21,11 +21,26 @@ var api = new ParseServer({
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   },
   push: {
-    ios: {
-      pfx: 'Certificates.p12',
+    ios: [{
+      pfx: 'Certificates_client.p12',
       bundleId: 'com.rtayal.DayCareClient',
       production: false
-    }
+    },
+    {
+      pfx: 'Certificates_client.p12',
+      bundleId: 'com.rtayal.DayCareClient',
+      production: true
+    },
+    {
+      pfx: 'Certificates_daycare.p12',
+      bundleId: 'com.rtayal.DayCare',
+      production: false
+    },
+    {
+      pfx: 'Certificates_daycare.p12',
+      bundleId: 'com.rtayal.DayCare',
+      production: true
+    }]
   }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
