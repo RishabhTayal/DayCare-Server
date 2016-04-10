@@ -4,12 +4,13 @@ Parse.Cloud.define('hello', function(req, res) {
 });
 
 Parse.Cloud.define("notification", function(request, response) {
-    // Parse.Cloud.useMasterKey();
-    // var query = request.params.query;
+    var userId = request.params.userId;
+    var query = new Parse.Query(Parse.Installation);
+    query.equalTo("owner", userId);
     // console.log(query);
     Parse.Push.send({
-        channels: ["channel"],
-        // where: query,
+        // channels: ["channel"],
+        where: query,
         data: {
             alert: request.params.pushText
         }
